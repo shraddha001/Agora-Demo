@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Remote video fills screen -->
+    <FrameLayout
+        android:id="@+id/remote_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Local video small preview on top right -->
+    <FrameLayout
+        android:id="@+id/local_video_container"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:background="#000000" />
+
+    <!-- Controls panel at bottom -->
+    <LinearLayout
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="50dp"
+        android:background="#73FFEB3B"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/btnMute"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_mic"
+            android:contentDescription="Mute/Unmute" />
+
+        <ImageButton
+            android:id="@+id/btnSwitchCamera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_switch_camera"
+            android:contentDescription="Switch Camera"
+            android:layout_marginStart="20dp" />
+
+        <ImageButton
+            android:id="@+id/btnEndCall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_call_end"
+            android:contentDescription="End Call"
+            android:layout_marginStart="20dp" />
+
+    </LinearLayout>
+
+</FrameLayout>
